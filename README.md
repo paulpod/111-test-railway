@@ -28,3 +28,5 @@ Get up and running in 5 minutes
 11. Put it somewhere so other people can look at it `heroku create` and
 
 12. `git push heroku main` all done!
+
+13. Everyone happy? Switch back to main `git checkout main` and tidy up `git branch -D myFeature`

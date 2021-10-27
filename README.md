@@ -19,7 +19,7 @@ Get up and running in 5 minutes
 
 7. Do some work
 
-8. Happy? Make a commit `git add .` and `git commit -m "new feature is cool`
+8. Happy? Make a commit `git add .` and `git commit -m "new feature is cool"`
 
 9. Push your work to github `git push origin myFeature`
 

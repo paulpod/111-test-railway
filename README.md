@@ -1,4 +1,4 @@
-# 111 online protypes
+# 111 online prototypes
 Design prototypes for 111 online project
 
 Note this is prototype code. Not intended for production use.

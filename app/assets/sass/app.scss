@@ -38,7 +38,6 @@
 @import "modules/dispositions/care-advice";
 @import "modules/dispositions/disposition-unit";
 @import "modules/feedback/feedback";
-@import "modules/footer-global/footer";
 @import "modules/forms/date";
 @import "modules/forms/postcode";
 @import "modules/forms/errors";
@@ -52,8 +51,6 @@
 @import "modules/forms/textarea";
 @import "modules/gp-details/gp-details";
 @import "modules/gp-lookup/gp-lookup";
-@import "modules/header-global/header-global";
-@import "modules/header-local/header-panel-local";
 @import "modules/highlight-flag/highlight-flag";
 @import "modules/image/image";
 @import "modules/interrupt/interrupt";
@@ -94,8 +91,56 @@
   @import "node_modules/nhsuk-frontend/packages/components/back-link/back-link";
   @import "node_modules/nhsuk-frontend/packages/components/breadcrumb/breadcrumb";
   @import "node_modules/nhsuk-frontend/packages/components/button/button";
+  @import 'node_modules/nhsuk-frontend/packages/components/checkboxes/checkboxes';
   @import "node_modules/nhsuk-frontend/packages/components/emergency-alert/emergency-alert";
+  @import "node_modules/nhsuk-frontend/packages/components/footer/_footer";
+  @import "node_modules/nhsuk-frontend/packages/components/header/_header";
   @import "node_modules/nhsuk-frontend/packages/components/images/images";
+
+  // ===========================================================================
+  // NHS.UK header and footer overrides from shame.scss:
+  // https://dev.azure.com/NHS111Online/111Online/_git/nhs111-web.git?path=%2FNHS111%2FNHS111.Web.Frontend%2Fsrc%2Fstyles%2F_nhsuk-frontend-shame.scss
+
+  // NHS.UK header
+  .nhsuk-header__logo {
+    max-width: none;
+    .nhsuk-logo__background {
+      fill: #fff;
+    }
+    .nhsuk-logo__text {
+      fill: #005eb8; /* $color_nhsuk-blue */
+    }
+    .util-digits { // squish the 1 1 1
+      letter-spacing: -.14em;
+      padding-right: .14em;
+    }
+  }
+  .nhsuk-header__link--service {
+    align-items: center;
+    display: flex;
+  }
+  .nhsuk-header__service-name {
+    padding-left: nhsuk-spacing(3);
+    font-size: 19px;
+    font-size: nhsuk-px-to-rem(19);
+  }
+
+  // NHS.UK footer
+  .nhsuk-footer {
+    .nhsuk-section-break--visible {
+      border-bottom-color: #768692;
+    }
+    a,
+    a:visited {
+      color: #4c6272;
+    }
+    p {
+      color: #4c6272;
+    }
+    .nhsuk-footer__list-item {
+      float: none;
+    }
+  }
 
   /* MAT'S ANNOYING OVERRIDES */
   .button {
@@ -153,13 +198,6 @@
     @include nhsuk-typography-responsive(19);
   }
 
-  /*.collapse-content {
-    margin-top: $baseline-grid-unit*4;
-    @include media(mid) {
-      margin-top: $baseline-grid-unit*6;
-    }
-  }*/
-
   .nhsuk-image {
     background-color: $grey-5;
   }
@@ -191,4 +229,63 @@
       }
     }
   }
+}
+
+// =============================================================================
+// Overrides to handle NHS.UK background, tweaks to a few components
+// =============================================================================
+body {
+  background-color: #f0f4f5; /* $color_nhsuk-grey-5 */
+}
+.callout--attention {
+  border-color: #005eb8; /* $color_nhsuk-blue */
+}
+.callout--muted {
+  background-color: #fff;
+}
+.callout--info {
+  border-color: #4c6272; /* $color_nhsuk-rey-1 */
+  background-color: #fff;
+}
+.callout--warning {
+  border-color: #ffb81C ; /* $color_nhsuk-arm-yellow */
+  border-width: 4px 0 0 0;
+  background-color: #fff;
+}
+.callout--alert {
+  border-color: #d5281b ; /* $color_nhsuk-ed */
+  background-color: #fff;
+}
+.callout--error {
+  border-color: #d5281b ; /* $color_nhsuk-ed */
+  background-color: #fff;
+}
+.signage.info {
+  border-color: #005eb8; /* $color_nhsuk-lue */
+  background-color: #fff; /* I'm not sure this exact thing is used tbh */
+}
+.content-seperator,
+.content-seperator--dark-blue {
+  background-color: #aeb7bd; /* $color_nhsuk-rey-3 */
+}
+.service-details,
+.service-listing {
+  border-color: #aeb7bd; /* $color_nhsuk-rey-3 */
+  background-color: #fff;
+}
+.service-details-container .map-frame {
+  border-top: 4px solid white !important;
+  border-right: 4px solid white !important;
+  border-bottom: 4px solid white !important;
+  border-left: 4px solid white !important;
+}
+.map-frame {
+  height: 100% !important;
+}
+.address-listing .address {
+  background-color: #fff;
+}
+.summary-list dt,
+.summary-list dd {
+  border-bottom-color: #aeb7bd; /* $color_nhsuk-grey-3 */
 }

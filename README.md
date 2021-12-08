@@ -30,3 +30,14 @@ Get up and running in 5 minutes
 12. `git push heroku main` all done!
 
 13. Everyone happy? Switch back to main `git checkout main` and tidy up `git branch -D myFeature`
+
+## Troubleshooting
+No `git`? Install Xcode tools from Apple
+
+Error seeing the repo on github?
+You probably need to install Github CLI tools and login.
+Use `brew install gh` and then `gh auth login` and input the verification code from the terminal on the web.
+
+No `grunt`? Install with `brew install grunt`
+
+No `brew`? Install from https://brew.sh

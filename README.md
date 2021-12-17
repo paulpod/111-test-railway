@@ -19,7 +19,7 @@ Get up and running in 5 minutes
 
 6. Make a branch `git checkout -b myFeature`
 
-7. Do some work
+7. Do some work. You can find some examples on this page `http://localhost:3000/examples`
 
 8. Happy? Make a commit `git add .` and `git commit -m "new feature is cool"`
 

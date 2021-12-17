@@ -1,0 +1,172 @@
+{% set suppress_feedback = true %}
+
+{% extends '_layouts/layout.html' %}
+
+{% block page_title %}Index{% endblock %}
+
+{% block body_css_classes %}nhsuk-frontend{% endblock %}
+
+{% block content %}
+
+<div class="content-block measure">
+
+
+  <h1>111 components - H1</h1>
+
+  <h2>Title - H2</h2>
+
+  <h3>Sub title - H3</h3>
+
+  <h4>And this is a measly H4 subheading</h4>
+
+  <h5>We do have an even smaller heading, for the H5 too</h5>
+
+  <p>And ending the typographic tour with a bit of body text that is quite big in the scheme of things.<p>
+
+  <p class="small">So we do sometimes use the small class too, but hopefully not very often.</p>
+
+
+  <!-- callouts are used on most pages the rules are quite loose - whatever works -->
+
+  <div class="callout callout--attention">
+    This is a callout for maximum attention - callout--attention
+  </div>
+
+  <div class="callout callout--info">
+    This is a callout for information - callout--info
+  </div>
+
+  <div class="callout callout--muted">
+    This is a muted callout, least possible attention - callout--muted
+  </div>
+
+  <div class="callout callout--warning">
+    This is used for important things, like timings and warnings - callout--warning
+  </div>
+
+  <div class="callout callout--alert">
+    This is quite important - callout--alert
+  </div>
+
+  <div class="callout callout--error">
+    Something has gone wrong and you need to do something - callout--error
+  </div>
+
+  <!-- we have a special small horizontal divider because we like it -->
+
+  <div class="content-seperator content-seperator--equalvertspacing--large"></div>
+
+
+  <!-- most interactions are using radio buttons for choices -->
+
+  <div id="thisform">
+    <fieldset>
+       <legend>
+        <h1>Choose one of these:</h1>
+
+        <div class="callout callout--info">
+          <p>Under some questions we use a callout to help users answer the question better.</p>
+        </div>
+
+        <label class="block-label">
+          <input id="" name="entry" value="111online" type="radio" class="selection-button-radio">
+          <span>
+           check if my symptoms or injury need medical help
+          </span>
+        </label>
+
+        <label class="block-label">
+          <input id="" name="entry" value="nhslink-conditions" type="radio" class="selection-button-radio">
+          <span>
+            get general information about a condition or problem
+          </span>
+        </label>
+
+        <p>And some forms will have a text input field</p>
+
+        <div>
+          <input name="text" id="text" type="text" autocomplete="off">
+        </div>
+
+      </legend>
+    </fieldset>
+
+
+    <div class="form-controls">
+      <p>Sometimes you‘ll want a link styled as a button, like this:</p>
+      <a href="#" class="button">Next</a>
+
+
+      <p>Other times you‘ll want a real form button to submit the data to the routes.js, like this:</p>
+      <button class="button" type="submit">Next</button>
+    </div>
+
+    <p>Yes, they look the same.</p>
+
+  </div>
+  <!-- end #thisform -->
+
+  <details>
+    <summary><span>What is a twizzler?</span></summary>
+    <div>
+      <p>
+        This is a twizzler. Also known as an expander or a HTML5 details/summary element. We use them a lot to keep information that is only relevant to some people out of the way of most people. It's useful to ask a question in the link - the summary.
+      </p>
+    </div>
+  </details>
+
+</div>
+
+
+  <!-- bigger example components -->
+  <div class="service-details-container">
+
+    <div class="details-1 service-details">
+      <div class="unit address">
+        <p>
+          <b>A&E (accident and emergency)</b><br>
+          City hospital, Birmingham<br>
+          Dudley Road<br>
+          Birmingham<br>
+          B18 7QH
+        </p>
+      </div>
+      <div class="unit">
+        <div class="opening-times">
+          <div class="single">
+            Open 24 hours
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="geo map-frame">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9718.158976286779!2d-1.9412695557458626!3d52.487468669492515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bce188d998bd%3A0x9e6eee3678148c92!2sBirmingham%20City%20Hospital!5e0!3m2!1sen!2suk!4v1596112618807!5m2!1sen!2suk" width="100%" height="100%" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+
+    <div class="details-2 service-details">
+      <div class="unit">
+        <!--<b class="form-hint">Remember to book before you go</b>-->
+        <a class="nhsuk-action-link__link" href="slot-variations/pick-slot-1-15mins-expander">
+          <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+          </svg>
+          <span class="nhsuk-action-link__text">Book a time</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- end the booking map component -->
+
+  
+
+</div>
+
+{% endblock %}
+
+{% block body_after %}
+
+{% endblock %}
+

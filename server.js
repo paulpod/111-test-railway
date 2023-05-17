@@ -19,7 +19,7 @@ var app = express()
 // Grab environment variables specified in Procfile or as Heroku config vars
 var username = process.env.USERNAME
 var password = process.env.PASSWORD
-var appEnvironment = process.env.NODE_ENV || 'development'
+var appEnvironment = process.env.NODE_ENV || 'production'
 var useAuth = process.env.USE_AUTH || config.useAuth
 var useHttps = process.env.USE_HTTPS || config.useHttps
 
